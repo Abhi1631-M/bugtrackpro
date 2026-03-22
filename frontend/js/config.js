@@ -6,5 +6,5 @@
  *             e.g.  'https://bugtrackpro-production.up.railway.app'
  */
 const CONFIG = {
-  BASE_URL: 'http://localhost:8080',
+  BASE_URL: 'https://bugtrackpro-production.up.railway.app',
 };

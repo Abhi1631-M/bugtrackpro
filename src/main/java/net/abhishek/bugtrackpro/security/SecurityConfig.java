@@ -43,6 +43,9 @@ public class SecurityConfig {
                         // ✅ Auth PUBLIC
                         .requestMatchers("/api/auth/**").permitAll()
 
+                        // ✅ Actuator health (for Railway health checks)
+                        .requestMatchers("/actuator/health", "/actuator/info").permitAll()
+
                         // ✅ User registration is public; listing users requires admin
                         .requestMatchers(org.springframework.http.HttpMethod.POST, "/api/users").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/users/**")
